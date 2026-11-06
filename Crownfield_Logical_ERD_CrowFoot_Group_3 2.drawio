@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="Electron" agent="OpenAI">
+  <diagram id="logical-erd" name="Logical ERD">
+    <mxGraphModel dx="1717" dy="1067" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#E8F3FF;strokeColor=#2F75B5;strokeWidth=2;align=left;verticalAlign=middle;fontSize=14;fontColor=#202124;spacingLeft=12;spacingRight=8;spacingTop=8;" value="SPECIALTY PK  SpecialtyID UQ  SpecialtyName" vertex="1">
+          <mxGeometry height="105" width="230" x="90" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#E8F6EF;strokeColor=#2E8B57;strokeWidth=2;align=left;verticalAlign=middle;fontSize=14;fontColor=#202124;spacingLeft=12;spacingRight=8;spacingTop=8;" value="CLINICIAN PK  ClinicianID ClinicianName FK  SpecialtyID" vertex="1">
+          <mxGeometry height="125" width="250" x="685" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF1E6;strokeColor=#C55A11;strokeWidth=2;align=left;verticalAlign=middle;fontSize=14;fontColor=#202124;spacingLeft=12;spacingRight=8;spacingTop=8;" value="DIAGNOSIS PK  DiagnosisID DiagnosisName" vertex="1">
+          <mxGeometry height="105" width="240" x="1287.5" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#F2E8FF;strokeColor=#805AD5;strokeWidth=2;align=left;verticalAlign=middle;fontSize=14;fontColor=#202124;spacingLeft=12;spacingRight=8;spacingTop=8;" value="PATIENT PK  PatientID FirstName LastName Postcode" vertex="1">
+          <mxGeometry height="145" width="230" x="90" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#E6F7FA;strokeColor=#168A9A;strokeWidth=2;align=left;verticalAlign=middle;fontSize=14;fontColor=#202124;spacingLeft=12;spacingRight=8;spacingTop=8;" value="CLINIC PK  ClinicID ClinicName" vertex="1">
+          <mxGeometry height="105" width="220" x="90" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#DCEBFA;strokeColor=#1F4E79;strokeWidth=2;align=left;verticalAlign=middle;fontSize=14;fontColor=#202124;spacingLeft=12;spacingRight=8;spacingTop=8;" value="APPOINTMENT PK  AppointmentID FK  PatientID FK  ClinicianID FK  ClinicID AppointmentDate AppointmentTime" vertex="1">
+          <mxGeometry height="190" width="300" x="660" y="332.5" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFF2CC;strokeColor=#BF9000;strokeWidth=2;align=left;verticalAlign=middle;fontSize=14;fontColor=#202124;spacingLeft=12;spacingRight=8;spacingTop=8;" value="APPOINTMENT_DIAGNOSIS PK/FK  AppointmentID PK/FK  DiagnosisID" vertex="1">
+          <mxGeometry height="120" width="275" x="1280" y="367.5" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FCE4D6;strokeColor=#C65911;strokeWidth=2;align=left;verticalAlign=middle;fontSize=14;fontColor=#202124;spacingLeft=12;spacingRight=8;spacingTop=8;" value="FOLLOW_UP_PLAN PK  FollowUpID FK  AppointmentID (UNIQUE) DueDate Priority Status Notes" vertex="1">
+          <mxGeometry height="170" width="290" x="320" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#E2F0D9;strokeColor=#548235;strokeWidth=2;align=left;verticalAlign=middle;fontSize=14;fontColor=#202124;spacingLeft=12;spacingRight=8;spacingTop=8;" value="PRESCRIPTION PK  PrescriptionID FK  AppointmentID" vertex="1">
+          <mxGeometry height="110" width="250" x="685" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#F4E5F7;strokeColor=#A64D79;strokeWidth=2;align=left;verticalAlign=middle;fontSize=14;fontColor=#202124;spacingLeft=12;spacingRight=8;spacingTop=8;" value="MEDICINE PK  MedicineID MedicineName" vertex="1">
+          <mxGeometry height="105" width="240" x="1292.5" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFE6EF;strokeColor=#C2185B;strokeWidth=2;align=left;verticalAlign=middle;fontSize=14;fontColor=#202124;spacingLeft=12;spacingRight=8;spacingTop=8;" value="PRESCRIPTION_ITEM PK/FK  PrescriptionID PK/FK  MedicineID Dose Route Frequency Duration" vertex="1">
+          <mxGeometry height="170" width="285" x="1270" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="30" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#65758B;strokeWidth=2;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=12;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="3" value="1:M — Specialty to Clinician">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="31" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#65758B;strokeWidth=2;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=12;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="7" value="1:M — Patient to Appointment">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="32" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#65758B;strokeWidth=2;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=12;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="7" value="1:M — Clinician to Appointment">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="33" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#65758B;strokeWidth=2;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=12;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="7" value="1:M — Clinic to Appointment">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#65758B;strokeWidth=2;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=12;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="8" value="1:M — Appointment to AppointmentDiagnosis&lt;br&gt;M:N overall with Diagnosis">
+          <mxGeometry relative="1" y="-2" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="35" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#65758B;strokeWidth=2;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=12;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="8" value="1:M — Diagnosis to AppointmentDiagnosis&lt;br&gt;M:N overall with Appointment">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#65758B;strokeWidth=2;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=12;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="10" value="1:M — Appointment to Prescription">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="37" edge="1" parent="1" source="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#65758B;strokeWidth=2;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=12;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="12" value="1:M — Prescription to PrescriptionItem&lt;br&gt;M:N overall with Medicine">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" edge="1" parent="1" source="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#65758B;strokeWidth=2;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;fontSize=12;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="12" value="1:M — Medicine to PrescriptionItem&lt;br&gt;M:N overall with Prescription">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="39" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToOne;endFill=0;strokeColor=#65758B;strokeWidth=2;fontSize=13;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="9" value="1 : 0..1 — Appointment to FollowUpPlan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="60" parent="1" style="text;html=0;align=center;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#17365d;" value="LOGICAL ERD — CROWNFIELD EYE HOSPITAL" vertex="1">
+          <mxGeometry height="45" width="900" x="350" y="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,78 @@
+<mxfile host="Electron" agent="ChatGPT">
+  <diagram id="crownfield-erd" name="Page-1">
+    <mxGraphModel dx="2060" dy="1280" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2048" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;fontSize=17;fontStyle=1;arcSize=18;" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Specialty&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="172" x="10" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;fontSize=17;fontStyle=1;arcSize=18;" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Clinician&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="166" x="386" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;fontStyle=1;arcSize=18;" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Patient&lt;/font&gt;" vertex="1">
+          <mxGeometry height="79" width="155" x="10" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=17;fontStyle=1;arcSize=18;" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Clinic&lt;/font&gt;" vertex="1">
+          <mxGeometry height="79" width="142" x="10" y="459" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=17;fontStyle=1;arcSize=18;" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Appointment&lt;/font&gt;" vertex="1">
+          <mxGeometry height="79" width="210" x="730" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=17;fontStyle=1;arcSize=18;" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Diagnosis&lt;/font&gt;" vertex="1">
+          <mxGeometry height="79" width="178" x="900" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=17;fontStyle=1;arcSize=18;" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Prescription&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="195" x="1470" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;fontStyle=1;arcSize=18;" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;FollowUpPlan&lt;/font&gt;" vertex="1">
+          <mxGeometry height="79" width="210" x="880" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;fontSize=17;fontStyle=1;arcSize=18;" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;AppointmentDiagnosis&lt;/font&gt;" vertex="1">
+          <mxGeometry height="79" width="290" x="1290" y="459" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;fontSize=17;fontStyle=1;arcSize=18;" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;Medicine&lt;/font&gt;" vertex="1">
+          <mxGeometry height="79" width="174" x="1810" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=17;fontStyle=1;arcSize=18;" value="&lt;font style=&quot;font-size: 25px;&quot;&gt;PrescriptionItem&lt;/font&gt;" vertex="1">
+          <mxGeometry height="79" width="234" x="1780" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeColor=#65758B;strokeWidth=2;fontSize=20;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="6" value="attends&lt;br&gt;1 : M">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeColor=#65758B;strokeWidth=2;fontSize=20;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="3" value="classifies&lt;br&gt;1 : M">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeColor=#65758B;strokeWidth=2;fontSize=20;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="6" value="conducts&lt;br&gt;1 : M">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeColor=#65758B;strokeWidth=2;fontSize=20;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="6" value="hosts&lt;br&gt;1 : M">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeColor=#65758B;strokeWidth=2;fontSize=20;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="8" value="may generate&lt;br&gt;1 : M">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERzeroToOne;endFill=0;strokeColor=#65758B;strokeWidth=2;fontSize=20;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="9" value="may generate&lt;br&gt;1 : 0..1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="26" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeColor=#65758B;strokeWidth=2;fontSize=20;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="10" value="may result in&lt;br&gt;1 : M">
+          <mxGeometry relative="1" x="-0.5229" as="geometry">
+            <mxPoint y="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="1435" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="27" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeColor=#65758B;strokeWidth=2;fontSize=20;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="10" value="recorded through&lt;br&gt;1 : M">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="28" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeColor=#65758B;strokeWidth=2;fontSize=20;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="12" value="contains&lt;br&gt;1 : M">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29" edge="1" parent="1" source="11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;strokeColor=#65758B;strokeWidth=2;fontSize=20;fontColor=#263238;labelBackgroundColor=#FFFFFF;" target="12" value="listed through&lt;br&gt;1 : M">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
